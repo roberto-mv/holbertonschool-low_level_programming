@@ -9,20 +9,22 @@
 
 int main(void)
 {
-int c, x;
-for (c = 48; c < 57; c++)
-{
-for (x = c + 1; x < 589; x++)
-{
-	putchar(c);
-	putchar(x);
-	if (c != 56 && x != 57)
+	int i;
+	int j;
+
+	for (i = 48; i < 57; i++)
 	{
-		putchar(',');
-		putchar(' ');
+		for (j = i + 1; j < 58; j++)
+		{
+			putchar(i);
+			putchar(j);
+			if (i != 56 || j != 57)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
-	}
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
