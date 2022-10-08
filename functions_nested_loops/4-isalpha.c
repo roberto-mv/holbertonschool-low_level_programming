@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
+ * _isalpha - returns whether c is an alpha character
  *
+ * @c: ascii value of a charactetter, 0 otherwise
  */
 int _isalpha(int c)
 {
