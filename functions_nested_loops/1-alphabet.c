@@ -1,13 +1,17 @@
 #include "main.h"
 
 /**
- * main - putchar
+ * print_alphabet - prints the alphabet
  *
  * Return: 0 on success
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	printf("_putchar\n");
-	return (0);
+	char l;
+
+	for (l = 'a'; l <= 'z'; l++)
+		_putchar(l);
+
+	_putchar('\n');
 }
