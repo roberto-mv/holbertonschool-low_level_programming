@@ -3,7 +3,9 @@
 /**
  * _isalpha - returns whether c is an alpha character
  *
- * @c: ascii value of a charactetter, 0 otherwise
+ * @c: ascii value of a character we're determining if is alpha
+ *
+ * Return: 1 is c is a letter, 0 otherwise
  */
 int _isalpha(int c)
 {
