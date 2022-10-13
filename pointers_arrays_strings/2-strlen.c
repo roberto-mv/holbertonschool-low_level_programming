@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * strlen - function that returns
+ *
+ * @s: parameter
  *
  * Return: Always 0.
  */
