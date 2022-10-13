@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strlen - function that returns
+ * _strlen - function that returns
  *
  * @s: parameter
  *
