@@ -1,18 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - a function that prints it name
- * @argc: a arguments count that passed to the functionm,
- * in this function, it was designed to unused variable.
- * @argv: a pointer point to argument string
+ * main - function
+ * @argc: arguments counter
+ * @argv: array of pointer
  *
- * Return: 0 on success
+ * Return: return 0 on success
  */
 
-int main(int argc, char *argv[])
+int main(int argc __ttribute__((unused)), char *argv[])
 {
-	(void)argc;
-
-	printf("%s\n", argv[0]);
+	printf("%s\n", *argv);
 	return (0);
 }
