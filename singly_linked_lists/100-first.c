@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
- * _100first - Prints a message 
+ * _100first - Prints a message
  **/
 void __attribute__ ((constructor)) _100first(void)
 {
