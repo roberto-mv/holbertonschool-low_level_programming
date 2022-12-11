@@ -4,42 +4,34 @@
 #include <string.h>
 
 /**
- * add_node_end - Adds a new node 
- * @head: Head
- * @str: New value
- *
- * Return: Return the new node
- **/
+ * add_node_end - add new node to the end of list_t
+ * @head: pointer to the pointer of beginning of list_t
+ * @str: string to be added
+ * Return: New node added
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	int len;
-	list_t *new;
+	list_t *add, *current;
+	int a;
 
-	if (str == NULL || head == NULL)
+	if (head == NULL)
 		return (NULL);
-
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	add = malloc(sizeof(list_t));
+	if (add == NULL)
 		return (NULL);
-
-	for (len = 0; str[len] != 0; len++)
-		;
-
-	new->str = malloc(len + 1);
-	if (new->str == NULL)
+	if (*head == NULL)
+		*head = add;
+	else
 	{
-		free(new);
-		return (NULL);
+		current = *head;
+		while (current->next != NULL)
+			current = current->next;
+		current->next = add;
 	}
-
-	new->str = strdup(str);
-	new->len = len;
-	new->next = NULL;
-
-	for (; *head; )
-		head = &(*head)->next;
-
-	*head = new;
-
-	return (new);
+	add->next = NULL;
+	add->str = strdup(str);
+	for (a = 0; str[a] != '\0'; a++)
+		;
+	add->len = a;
+	return (add);
 }
