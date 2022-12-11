@@ -2,24 +2,23 @@
 #include <stdio.h>
 
 /**
- * print_list - Prints elements of the list
- * @h: Head of the list
- * Return: Numbers
- **/
+ * print_list - function to print list
+ * @h: pointer to the beginning of the list
+ * Return: The count of elements
+ */
 size_t print_list(const list_t *h)
 {
-	int i;
+	size_t count = 0;
 
-	if (h == NULL)
+	while (h != NULL)
 	{
-		return (0);
-	}
-	for (i = 0; h; i++)
-	{
-		printf("[%u] %s\n", (h->str != NULL) ? h->len : 0,
-				(h->str != NULL) ? h->str : "(nil)");
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+		printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
+		count++;
 	}
 
-	return (i);
+	return (count);
 }
