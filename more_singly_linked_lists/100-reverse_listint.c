@@ -3,7 +3,7 @@
 /**
  * reverse_listint - function to reverse a list
  * @head: pointer to the pointer of the list
- * Return: pointer to the reversed list
+ * Return: pointer reversed list
  */
 listint_t *reverse_listint(listint_t **head)
 {
